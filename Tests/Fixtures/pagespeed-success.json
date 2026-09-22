@@ -1,0 +1,60 @@
+{
+  "id": "https://example.test/",
+  "loadingExperience": {
+    "metrics": {
+      "INTERACTION_TO_NEXT_PAINT": {
+        "percentile": 123,
+        "category": "FAST"
+      }
+    }
+  },
+  "lighthouseResult": {
+    "finalDisplayedUrl": "https://example.test/",
+    "categories": {
+      "performance": {
+        "score": 0.82,
+        "auditRefs": [
+          {"id": "unused-javascript", "group": "load-opportunities"},
+          {"id": "dom-size", "group": "diagnostics"}
+        ]
+      },
+      "accessibility": {"score": 0.96},
+      "best-practices": {"score": 1},
+      "seo": {"score": 0.91}
+    },
+    "audits": {
+      "largest-contentful-paint": {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "displayValue": "2.1 s",
+        "numericValue": 2100,
+        "numericUnit": "millisecond"
+      },
+      "total-blocking-time": {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "displayValue": "180 ms",
+        "numericValue": 180,
+        "numericUnit": "millisecond"
+      },
+      "unused-javascript": {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "score": 0.4,
+        "displayValue": "420 KiB",
+        "details": {"overallSavingsBytes": 430080}
+      },
+      "dom-size": {
+        "id": "dom-size",
+        "title": "Avoid an excessive DOM size",
+        "score": 0,
+        "displayValue": "1,820 elements"
+      },
+      "is-on-https": {
+        "id": "is-on-https",
+        "title": "Uses HTTPS",
+        "score": 1
+      }
+    }
+  }
+}

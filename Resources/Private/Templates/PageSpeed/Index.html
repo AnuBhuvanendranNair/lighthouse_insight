@@ -1,0 +1,145 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Module" />
+
+<f:section name="Content">
+    <f:flashMessages queueIdentifier="{flashMessageQueueIdentifier}" />
+
+    <div class="module-body">
+        <h1><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:module.title" /></h1>
+
+        <form action="{analyzeUri}" method="post" name="editform" class="form" data-pagespeed-form>
+            <input type="hidden" name="id" value="{pageUid}" />
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="form-label"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:label.selectedPage" /></label>
+                        <f:if condition="{pageRecord}">
+                            <f:then>
+                                <div>
+                                    <strong>{pageRecord.title}</strong>
+                                    <span class="text-muted">#{pageUid}</span>
+                                </div>
+                            </f:then>
+                            <f:else>
+                                <div class="text-muted"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:text.selectPageHint" /></div>
+                            </f:else>
+                        </f:if>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="lighthouse-insight-manual-url"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:label.resolvedUrl" /></label>
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="lighthouse-insight-manual-url"
+                                data-formengine-input-name="{manualUrlItemName}"
+                                value="{manualUrl}"
+                                placeholder="{resolvedUrl}"
+                            />
+                            <f:variable name="browseLink"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:button.browseLink" /></f:variable>
+                            <button
+                                type="button"
+                                class="btn btn-default"
+                                id="{manualUrlTriggerId}"
+                                href="{linkBrowserUri}"
+                                data-item-name="{manualUrlItemName}"
+                                title="{browseLink}"
+                                aria-label="{browseLink}"
+                            >
+                                <core:icon identifier="actions-wizard-link" size="small" />
+                            </button>
+                        </div>
+                        <input type="hidden" name="{manualUrlItemName}" value="{manualUrl}" />
+                        <f:if condition="{manualUrl}">
+                            <f:then>
+                                <span class="text-muted"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:hint.manualUrlOverride" /></span>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{resolvedUrl}">
+                                    <f:then>
+                                        <span class="text-muted"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:hint.manualUrlAuto" /></span>
+                                    </f:then>
+                                    <f:else>
+                                        <span class="text-muted"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:hint.manualUrlNone" /></span>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="lighthouse-insight-engine"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:label.engine" /></label>
+                        <select class="form-select" id="lighthouse-insight-engine" name="engine">
+                            <f:for each="{engines}" as="availableEngine">
+                                <f:if condition="{availableEngine.value} == {engine}">
+                                    <f:then>
+                                        <option value="{availableEngine.value}" selected="selected">{availableEngine.label}</option>
+                                    </f:then>
+                                    <f:else>
+                                        <option value="{availableEngine.value}">{availableEngine.label}</option>
+                                    </f:else>
+                                </f:if>
+                            </f:for>
+                        </select>
+                    </div>
+
+                    <f:if condition="!{localLighthouseEnvironment.available}">
+                        <div class="alert alert-warning">
+                            <strong><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:warning.localLighthouseUnavailable" /></strong>
+                            <ul>
+                                <f:for each="{localLighthouseEnvironment.messages}" as="message">
+                                    <li>{message}</li>
+                                </f:for>
+                                <li><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:hint.ensureNpmPackagePrefix" /> <code>npx --yes lighthouse@10.4.0 --version</code>.</li>
+                            </ul>
+                        </div>
+                    </f:if>
+
+                    <div class="form-group">
+                        <label class="form-label" for="lighthouse-insight-strategy"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:label.strategy" /></label>
+                        <select class="form-select" id="lighthouse-insight-strategy" name="strategy">
+                            <f:for each="{strategies}" as="availableStrategy">
+                                <f:if condition="{availableStrategy.value} == {strategy}">
+                                    <f:then>
+                                        <option value="{availableStrategy.value}" selected="selected">{availableStrategy.label}</option>
+                                    </f:then>
+                                    <f:else>
+                                        <option value="{availableStrategy.value}">{availableStrategy.label}</option>
+                                    </f:else>
+                                </f:if>
+                            </f:for>
+                        </select>
+                    </div>
+
+                    <f:variable name="runAnalysisLabel"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:button.runAnalysis" /></f:variable>
+                    <f:if condition="{resolvedUrl}">
+                        <f:then>
+                            <button type="submit" class="btn btn-primary" data-pagespeed-submit>{runAnalysisLabel}</button>
+                        </f:then>
+                        <f:else>
+                            <button type="submit" class="btn btn-primary" data-pagespeed-submit disabled="disabled">{runAnalysisLabel}</button>
+                        </f:else>
+                    </f:if>
+                </div>
+            </div>
+        </form>
+
+        <f:variable name="runningAnalysisLabel"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:text.runningAnalysis" /></f:variable>
+        <div class="lighthouse-insight-overlay" role="status" aria-live="polite" aria-label="{runningAnalysisLabel}" hidden data-pagespeed-overlay>
+            <div class="loader"></div>
+        </div>
+
+        <f:if condition="{result}">
+            <hr />
+            <p class="text-muted">
+                <f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:text.engineStrategySummary" arguments="{0: result.engine, 1: result.strategy}" />
+            </p>
+            <f:render partial="ScoreCards" arguments="{result: result}" />
+            <f:render partial="Metrics" arguments="{result: result}" />
+            <f:render partial="Audits" arguments="{result: result}" />
+        </f:if>
+    </div>
+</f:section>
+</html>

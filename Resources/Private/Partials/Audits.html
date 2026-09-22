@@ -1,0 +1,45 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<h2><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:heading.lighthouseFindings" /></h2>
+
+<details open>
+    <summary><strong><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:heading.opportunities" /></strong></summary>
+    <f:if condition="{result.opportunities}">
+        <f:then>
+            <f:for each="{result.opportunities}" as="audit">
+                <div class="callout callout-warning">
+                    <strong>{audit.title}</strong>
+                    <f:if condition="{audit.displayValue}"><div>{audit.displayValue}</div></f:if>
+                    <f:if condition="{audit.savings}"><div>{audit.savings}</div></f:if>
+                </div>
+            </f:for>
+        </f:then>
+        <f:else><p class="text-muted"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:text.noOpportunities" /></p></f:else>
+    </f:if>
+</details>
+
+<details>
+    <summary><strong><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:heading.diagnostics" /></strong></summary>
+    <f:if condition="{result.diagnostics}">
+        <f:then>
+            <f:for each="{result.diagnostics}" as="audit">
+                <div class="callout callout-info">
+                    <strong>{audit.title}</strong>
+                    <f:if condition="{audit.displayValue}"><div>{audit.displayValue}</div></f:if>
+                </div>
+            </f:for>
+        </f:then>
+        <f:else><p class="text-muted"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:text.noDiagnostics" /></p></f:else>
+    </f:if>
+</details>
+
+<details>
+    <summary><strong><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:heading.passedAudits" /></strong></summary>
+    <f:if condition="{result.passedAudits}">
+        <ul class="list-unstyled">
+            <f:for each="{result.passedAudits}" as="audit">
+                <li><span class="text-success">✓</span> {audit.title}</li>
+            </f:for>
+        </ul>
+    </f:if>
+</details>
+</html>

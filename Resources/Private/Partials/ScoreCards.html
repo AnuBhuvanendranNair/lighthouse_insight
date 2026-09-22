@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<h2><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:heading.scores" /></h2>
+<div class="lighthouse-insight-score-grid">
+    <div class="lighthouse-insight-score">
+        <div class="text-muted"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:score.performance" /></div>
+        <div class="lighthouse-insight-score-value lighthouse-insight-score-{result.scoreRatings.performance}">{result.scores.performance}</div>
+    </div>
+    <div class="lighthouse-insight-score">
+        <div class="text-muted"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:score.accessibility" /></div>
+        <div class="lighthouse-insight-score-value lighthouse-insight-score-{result.scoreRatings.accessibility}">{result.scores.accessibility}</div>
+    </div>
+    <div class="lighthouse-insight-score">
+        <div class="text-muted"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:score.bestPractices" /></div>
+        <div class="lighthouse-insight-score-value lighthouse-insight-score-{result.scoreRatings.bestPractices}">{result.scores.bestPractices}</div>
+    </div>
+    <div class="lighthouse-insight-score">
+        <div class="text-muted"><f:translate key="LLL:EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf:score.seo" /></div>
+        <div class="lighthouse-insight-score-value lighthouse-insight-score-{result.scoreRatings.seo}">{result.scores.seo}</div>
+    </div>
+</div>
+</html>

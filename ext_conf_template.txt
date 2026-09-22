@@ -1,0 +1,8 @@
+# cat=basic; type=string; label=Google PageSpeed Insights API key
+apiKey =
+# cat=local; type=string; label=Local Lighthouse Chrome flags
+localChromeFlags = --headless --ignore-certificate-errors --no-sandbox
+# cat=local; type=string; label=Local Lighthouse npm package
+localLighthousePackage = lighthouse@10.4.0
+# cat=local; type=int+; label=Local Lighthouse timeout in seconds
+localTimeout = 120

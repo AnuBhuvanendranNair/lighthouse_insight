@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="de" datatype="plaintext" original="EXT:lighthouse_insight/Resources/Private/Language/locallang.xlf" date="2026-09-22T00:00:00Z" product-name="lighthouse_insight">
+    <body>
+      <trans-unit id="module.title">
+        <source>PageSpeed Insights</source>
+        <target>PageSpeed Insights</target>
+      </trans-unit>
+
+      <trans-unit id="label.selectedPage">
+        <source>Selected page</source>
+        <target>Ausgewählte Seite</target>
+      </trans-unit>
+      <trans-unit id="text.selectPageHint">
+        <source>Select a page in the page tree.</source>
+        <target>Seite im Seitenbaum auswählen.</target>
+      </trans-unit>
+      <trans-unit id="label.resolvedUrl">
+        <source>Resolved URL</source>
+        <target>Aufgelöste URL</target>
+      </trans-unit>
+      <trans-unit id="button.browseLink">
+        <source>Browse for a page or external URL</source>
+        <target>Seite oder externe URL auswählen</target>
+      </trans-unit>
+      <trans-unit id="hint.manualUrlOverride">
+        <source>Overriding the automatically resolved page URL.</source>
+        <target>Überschreibt die automatisch aufgelöste Seiten-URL.</target>
+      </trans-unit>
+      <trans-unit id="hint.manualUrlAuto">
+        <source>Automatically resolved from the selected page. Leave empty to keep using this.</source>
+        <target>Automatisch anhand der ausgewählten Seite ermittelt. Leer lassen, um diese URL weiter zu verwenden.</target>
+      </trans-unit>
+      <trans-unit id="hint.manualUrlNone">
+        <source>No frontend URL available. Set one manually or select a page in the page tree.</source>
+        <target>Keine Frontend-URL verfügbar. Manuell festlegen oder eine Seite im Seitenbaum auswählen.</target>
+      </trans-unit>
+      <trans-unit id="label.engine">
+        <source>Engine</source>
+        <target>Engine</target>
+      </trans-unit>
+      <trans-unit id="label.strategy">
+        <source>Strategy</source>
+        <target>Strategie</target>
+      </trans-unit>
+      <trans-unit id="button.runAnalysis">
+        <source>Run analysis</source>
+        <target>Analyse starten</target>
+      </trans-unit>
+      <trans-unit id="text.runningAnalysis">
+        <source>Running analysis</source>
+        <target>Analyse läuft</target>
+      </trans-unit>
+      <trans-unit id="text.engineStrategySummary">
+        <source>Engine: %1$s · Strategy: %2$s</source>
+        <target>Engine: %1$s · Strategie: %2$s</target>
+      </trans-unit>
+
+      <trans-unit id="warning.localLighthouseUnavailable">
+        <source>Local Lighthouse is not available.</source>
+        <target>Lokales Lighthouse ist nicht verfügbar.</target>
+      </trans-unit>
+      <trans-unit id="hint.ensureNpmPackagePrefix">
+        <source>Ensure the configured Lighthouse npm package can run, for example</source>
+        <target>Stellen Sie sicher, dass das konfigurierte Lighthouse-npm-Paket ausgeführt werden kann, zum Beispiel</target>
+      </trans-unit>
+
+      <trans-unit id="engine.googleApi">
+        <source>Google PageSpeed API</source>
+        <target>Google PageSpeed API</target>
+      </trans-unit>
+      <trans-unit id="engine.localLighthouse">
+        <source>Local Lighthouse</source>
+        <target>Lokales Lighthouse</target>
+      </trans-unit>
+      <trans-unit id="strategy.mobile">
+        <source>Mobile</source>
+        <target>Mobil</target>
+      </trans-unit>
+      <trans-unit id="strategy.desktop">
+        <source>Desktop</source>
+        <target>Desktop</target>
+      </trans-unit>
+
+      <trans-unit id="heading.scores">
+        <source>Scores</source>
+        <target>Bewertungen</target>
+      </trans-unit>
+      <trans-unit id="score.performance">
+        <source>Performance</source>
+        <target>Leistung</target>
+      </trans-unit>
+      <trans-unit id="score.accessibility">
+        <source>Accessibility</source>
+        <target>Barrierefreiheit</target>
+      </trans-unit>
+      <trans-unit id="score.bestPractices">
+        <source>Best Practices</source>
+        <target>Bewährte Verfahren</target>
+      </trans-unit>
+      <trans-unit id="score.seo">
+        <source>SEO</source>
+        <target>SEO</target>
+      </trans-unit>
+
+      <trans-unit id="heading.labData">
+        <source>Lab data</source>
+        <target>Labordaten</target>
+      </trans-unit>
+      <trans-unit id="heading.fieldData">
+        <source>Field data</source>
+        <target>Felddaten</target>
+      </trans-unit>
+
+      <trans-unit id="heading.lighthouseFindings">
+        <source>Lighthouse findings</source>
+        <target>Lighthouse-Ergebnisse</target>
+      </trans-unit>
+      <trans-unit id="heading.opportunities">
+        <source>Opportunities</source>
+        <target>Verbesserungsmöglichkeiten</target>
+      </trans-unit>
+      <trans-unit id="text.noOpportunities">
+        <source>No opportunities reported.</source>
+        <target>Keine Verbesserungsmöglichkeiten gefunden.</target>
+      </trans-unit>
+      <trans-unit id="heading.diagnostics">
+        <source>Diagnostics</source>
+        <target>Diagnose</target>
+      </trans-unit>
+      <trans-unit id="text.noDiagnostics">
+        <source>No diagnostics reported.</source>
+        <target>Keine Diagnoseergebnisse gefunden.</target>
+      </trans-unit>
+      <trans-unit id="heading.passedAudits">
+        <source>Passed audits</source>
+        <target>Bestandene Prüfungen</target>
+      </trans-unit>
+
+      <trans-unit id="error.invalidStrategy">
+        <source>Invalid PageSpeed strategy selected.</source>
+        <target>Ungültige PageSpeed-Strategie ausgewählt.</target>
+      </trans-unit>
+      <trans-unit id="error.invalidEngine">
+        <source>Invalid analysis engine selected.</source>
+        <target>Ungültige Analyse-Engine ausgewählt.</target>
+      </trans-unit>
+      <trans-unit id="error.analysisFailedUnexpectedly">
+        <source>The PageSpeed analysis failed unexpectedly.</source>
+        <target>Die PageSpeed-Analyse ist unerwartet fehlgeschlagen.</target>
+      </trans-unit>
+      <trans-unit id="error.manualUrlUnresolved">
+        <source>The manually specified link could not be resolved.</source>
+        <target>Der manuell angegebene Link konnte nicht aufgelöst werden.</target>
+      </trans-unit>
+      <trans-unit id="error.manualUrlUnsupportedType">
+        <source>Only pages or external URLs are supported for the manual URL override.</source>
+        <target>Für die manuelle URL-Überschreibung werden nur Seiten oder externe URLs unterstützt.</target>
+      </trans-unit>
+      <trans-unit id="error.noPageSelected">
+        <source>No valid page selected.</source>
+        <target>Keine gültige Seite ausgewählt.</target>
+      </trans-unit>
+      <trans-unit id="error.pageUrlUnresolvable">
+        <source>The selected page could not be resolved to a frontend URL.</source>
+        <target>Die ausgewählte Seite konnte nicht in eine Frontend-URL aufgelöst werden.</target>
+      </trans-unit>
+      <trans-unit id="error.blockedUrl">
+        <source>Google PageSpeed Insights can only analyze publicly reachable HTTP/HTTPS URLs. Local, DDEV, private network, and reserved IP targets are blocked.</source>
+        <target>Google PageSpeed Insights kann nur öffentlich erreichbare HTTP/HTTPS-URLs analysieren. Lokale, DDEV-, private Netzwerk- und reservierte IP-Ziele sind blockiert.</target>
+      </trans-unit>
+      <trans-unit id="error.missingApiKey">
+        <source>PageSpeed API key has not been configured.</source>
+        <target>Der PageSpeed-API-Schlüssel wurde nicht konfiguriert.</target>
+      </trans-unit>
+      <trans-unit id="error.requestTimeout">
+        <source>Request timed out or could not be completed.</source>
+        <target>Zeitüberschreitung oder Anfrage konnte nicht abgeschlossen werden.</target>
+      </trans-unit>
+      <trans-unit id="error.rateLimitExceeded">
+        <source>PageSpeed Insights API rate limit exceeded.</source>
+        <target>Rate-Limit der PageSpeed Insights API überschritten.</target>
+      </trans-unit>
+      <trans-unit id="error.analysisFailed">
+        <source>Google PageSpeed Insights could not analyze this URL.</source>
+        <target>Google PageSpeed Insights konnte diese URL nicht analysieren.</target>
+      </trans-unit>
+      <trans-unit id="error.malformedResponse">
+        <source>Google PageSpeed Insights returned a malformed response.</source>
+        <target>Google PageSpeed Insights hat eine fehlerhafte Antwort zurückgegeben.</target>
+      </trans-unit>
+      <trans-unit id="error.parserMalformedResponse">
+        <source>Lighthouse returned a malformed response.</source>
+        <target>Lighthouse hat eine fehlerhafte Antwort zurückgegeben.</target>
+      </trans-unit>
+
+      <trans-unit id="error.localUnavailablePrefix">
+        <source>Local Lighthouse is not available.</source>
+        <target>Lokales Lighthouse ist nicht verfügbar.</target>
+      </trans-unit>
+      <trans-unit id="error.localTempFileFailed">
+        <source>Could not create a temporary Lighthouse report file.</source>
+        <target>Temporäre Lighthouse-Berichtsdatei konnte nicht erstellt werden.</target>
+      </trans-unit>
+      <trans-unit id="error.localTimeout">
+        <source>Local Lighthouse analysis timed out.</source>
+        <target>Die lokale Lighthouse-Analyse hat das Zeitlimit überschritten.</target>
+      </trans-unit>
+      <trans-unit id="error.localAnalysisFailed">
+        <source>Local Lighthouse could not analyze this URL. Check Node, Lighthouse, Chrome, and certificate setup.</source>
+        <target>Lokales Lighthouse konnte diese URL nicht analysieren. Node-, Lighthouse-, Chrome- und Zertifikatskonfiguration prüfen.</target>
+      </trans-unit>
+      <trans-unit id="error.localNoReport">
+        <source>Local Lighthouse did not produce a JSON report.</source>
+        <target>Lokales Lighthouse hat keinen JSON-Bericht erzeugt.</target>
+      </trans-unit>
+      <trans-unit id="error.localMalformedResponse">
+        <source>Local Lighthouse returned a malformed response.</source>
+        <target>Lokales Lighthouse hat eine fehlerhafte Antwort zurückgegeben.</target>
+      </trans-unit>
+
+      <trans-unit id="env.installNode">
+        <source>Install Node.js with npm/npx in the TYPO3 PHP runtime.</source>
+        <target>Node.js mit npm/npx in der TYPO3-PHP-Laufzeitumgebung installieren.</target>
+      </trans-unit>
+      <trans-unit id="env.installChrome">
+        <source>Install Chrome or Chromium and expose it as google-chrome, chromium, or CHROME_PATH.</source>
+        <target>Chrome oder Chromium installieren und als google-chrome, chromium oder CHROME_PATH bereitstellen.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

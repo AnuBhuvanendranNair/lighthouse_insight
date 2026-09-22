@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="messages" date="2026-09-16T00:00:00Z">
+    <body>
+      <trans-unit id="module.title">
+        <source>PageSpeed Insights</source>
+      </trans-unit>
+
+      <trans-unit id="label.selectedPage">
+        <source>Selected page</source>
+      </trans-unit>
+      <trans-unit id="text.selectPageHint">
+        <source>Select a page in the page tree.</source>
+      </trans-unit>
+      <trans-unit id="label.resolvedUrl">
+        <source>Resolved URL</source>
+      </trans-unit>
+      <trans-unit id="button.browseLink">
+        <source>Browse for a page or external URL</source>
+      </trans-unit>
+      <trans-unit id="hint.manualUrlOverride">
+        <source>Overriding the automatically resolved page URL.</source>
+      </trans-unit>
+      <trans-unit id="hint.manualUrlAuto">
+        <source>Automatically resolved from the selected page. Leave empty to keep using this.</source>
+      </trans-unit>
+      <trans-unit id="hint.manualUrlNone">
+        <source>No frontend URL available. Set one manually or select a page in the page tree.</source>
+      </trans-unit>
+      <trans-unit id="label.engine">
+        <source>Engine</source>
+      </trans-unit>
+      <trans-unit id="label.strategy">
+        <source>Strategy</source>
+      </trans-unit>
+      <trans-unit id="button.runAnalysis">
+        <source>Run analysis</source>
+      </trans-unit>
+      <trans-unit id="text.runningAnalysis">
+        <source>Running analysis</source>
+      </trans-unit>
+      <trans-unit id="text.engineStrategySummary">
+        <source>Engine: %1$s · Strategy: %2$s</source>
+      </trans-unit>
+
+      <trans-unit id="warning.localLighthouseUnavailable">
+        <source>Local Lighthouse is not available.</source>
+      </trans-unit>
+      <trans-unit id="hint.ensureNpmPackagePrefix">
+        <source>Ensure the configured Lighthouse npm package can run, for example</source>
+      </trans-unit>
+
+      <trans-unit id="engine.googleApi">
+        <source>Google PageSpeed API</source>
+      </trans-unit>
+      <trans-unit id="engine.localLighthouse">
+        <source>Local Lighthouse</source>
+      </trans-unit>
+      <trans-unit id="strategy.mobile">
+        <source>Mobile</source>
+      </trans-unit>
+      <trans-unit id="strategy.desktop">
+        <source>Desktop</source>
+      </trans-unit>
+
+      <trans-unit id="heading.scores">
+        <source>Scores</source>
+      </trans-unit>
+      <trans-unit id="score.performance">
+        <source>Performance</source>
+      </trans-unit>
+      <trans-unit id="score.accessibility">
+        <source>Accessibility</source>
+      </trans-unit>
+      <trans-unit id="score.bestPractices">
+        <source>Best Practices</source>
+      </trans-unit>
+      <trans-unit id="score.seo">
+        <source>SEO</source>
+      </trans-unit>
+
+      <trans-unit id="heading.labData">
+        <source>Lab data</source>
+      </trans-unit>
+      <trans-unit id="heading.fieldData">
+        <source>Field data</source>
+      </trans-unit>
+
+      <trans-unit id="heading.lighthouseFindings">
+        <source>Lighthouse findings</source>
+      </trans-unit>
+      <trans-unit id="heading.opportunities">
+        <source>Opportunities</source>
+      </trans-unit>
+      <trans-unit id="text.noOpportunities">
+        <source>No opportunities reported.</source>
+      </trans-unit>
+      <trans-unit id="heading.diagnostics">
+        <source>Diagnostics</source>
+      </trans-unit>
+      <trans-unit id="text.noDiagnostics">
+        <source>No diagnostics reported.</source>
+      </trans-unit>
+      <trans-unit id="heading.passedAudits">
+        <source>Passed audits</source>
+      </trans-unit>
+
+      <trans-unit id="error.invalidStrategy">
+        <source>Invalid PageSpeed strategy selected.</source>
+      </trans-unit>
+      <trans-unit id="error.invalidEngine">
+        <source>Invalid analysis engine selected.</source>
+      </trans-unit>
+      <trans-unit id="error.analysisFailedUnexpectedly">
+        <source>The PageSpeed analysis failed unexpectedly.</source>
+      </trans-unit>
+      <trans-unit id="error.manualUrlUnresolved">
+        <source>The manually specified link could not be resolved.</source>
+      </trans-unit>
+      <trans-unit id="error.manualUrlUnsupportedType">
+        <source>Only pages or external URLs are supported for the manual URL override.</source>
+      </trans-unit>
+      <trans-unit id="error.noPageSelected">
+        <source>No valid page selected.</source>
+      </trans-unit>
+      <trans-unit id="error.pageUrlUnresolvable">
+        <source>The selected page could not be resolved to a frontend URL.</source>
+      </trans-unit>
+      <trans-unit id="error.blockedUrl">
+        <source>Google PageSpeed Insights can only analyze publicly reachable HTTP/HTTPS URLs. Local, DDEV, private network, and reserved IP targets are blocked.</source>
+      </trans-unit>
+      <trans-unit id="error.missingApiKey">
+        <source>PageSpeed API key has not been configured.</source>
+      </trans-unit>
+      <trans-unit id="error.requestTimeout">
+        <source>Request timed out or could not be completed.</source>
+      </trans-unit>
+      <trans-unit id="error.rateLimitExceeded">
+        <source>PageSpeed Insights API rate limit exceeded.</source>
+      </trans-unit>
+      <trans-unit id="error.analysisFailed">
+        <source>Google PageSpeed Insights could not analyze this URL.</source>
+      </trans-unit>
+      <trans-unit id="error.malformedResponse">
+        <source>Google PageSpeed Insights returned a malformed response.</source>
+      </trans-unit>
+      <trans-unit id="error.parserMalformedResponse">
+        <source>Lighthouse returned a malformed response.</source>
+      </trans-unit>
+
+      <trans-unit id="error.localUnavailablePrefix">
+        <source>Local Lighthouse is not available.</source>
+      </trans-unit>
+      <trans-unit id="error.localTempFileFailed">
+        <source>Could not create a temporary Lighthouse report file.</source>
+      </trans-unit>
+      <trans-unit id="error.localTimeout">
+        <source>Local Lighthouse analysis timed out.</source>
+      </trans-unit>
+      <trans-unit id="error.localAnalysisFailed">
+        <source>Local Lighthouse could not analyze this URL. Check Node, Lighthouse, Chrome, and certificate setup.</source>
+      </trans-unit>
+      <trans-unit id="error.localNoReport">
+        <source>Local Lighthouse did not produce a JSON report.</source>
+      </trans-unit>
+      <trans-unit id="error.localMalformedResponse">
+        <source>Local Lighthouse returned a malformed response.</source>
+      </trans-unit>
+
+      <trans-unit id="env.installNode">
+        <source>Install Node.js with npm/npx in the TYPO3 PHP runtime.</source>
+      </trans-unit>
+      <trans-unit id="env.installChrome">
+        <source>Install Chrome or Chromium and expose it as google-chrome, chromium, or CHROME_PATH.</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
