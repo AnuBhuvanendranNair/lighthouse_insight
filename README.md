@@ -4,7 +4,7 @@ TYPO3 backend module that runs Google PageSpeed Insights (or a local Lighthouse 
 
 ## Requirements
 
-- TYPO3 14.3+
+- TYPO3 13.4+
 - PHP 8.2+
 - Composer installation
 - Google PageSpeed Insights API key (only needed for the `Google PageSpeed API` engine; the `Local Lighthouse` engine needs no API key)
@@ -38,7 +38,7 @@ All settings are in the extension configuration (Admin Tools > Settings > Extens
 | Key | Tab | Type | Description |
 | --- | --- | --- | --- |
 | `apiKey` | Basic | string | Google PageSpeed Insights API key. Required for the `Google PageSpeed API` engine. |
-| `localChromeFlags` | local | string | Chrome flags used by the local Lighthouse CLI run. Defaults to `--headless --ignore-certificate-errors --no-sandbox`. |
+| `localChromeFlags` | local | string | Chrome flags used by the local Lighthouse CLI run. Defaults to `--headless --ignore-certificate-errors --no-sandbox --disable-dev-shm-usage`. |
 | `localLighthousePackage` | local | string | npm package/version run via `npx`. Defaults to `lighthouse@10.4.0`. |
 | `localTimeout` | local | int | Timeout in seconds for the local Lighthouse process. Defaults to `120`. |
 

@@ -109,7 +109,7 @@ final readonly class LocalLighthouseService
             return $configuredFlags;
         }
 
-        return '--headless --ignore-certificate-errors --no-sandbox';
+        return '--headless --ignore-certificate-errors --no-sandbox --disable-dev-shm-usage';
     }
 
     private function getLighthousePackage(): string
